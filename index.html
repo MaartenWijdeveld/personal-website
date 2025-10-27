@@ -69,13 +69,19 @@
 
     <!-- wrapper -->
     <div id="wrapper">
-
       <!-- MW -->
       <section id="MW" class="wrapper style1 section">
         <h1>Maarten Wijdeveld</h1>
         <img src="images/Jotunheimen_2025.jpeg" 
              alt="Profile Picture" 
-             style="width: 200px; height: 300px; border-radius: 10px; box-shadow: 0 0 10px rgba(0,0,0,0.2);" />
+             style="
+             width: 200px; 
+             height: 200px; 
+             border-radius: 50%;       /* makes it circular */
+             object-fit: cover;        /* keeps proportions inside circle */
+             box-shadow: 0 0 10px rgba(0,0,0,0.2); 
+             transform: translateX(-20px);  /* shift left */
+             " />
       </section>
 
       
@@ -259,6 +265,7 @@ section.wrapper .button:hover {
     <script src="assets/js/main.js"></script>
   </body>
 </html>
+
 
 
 
