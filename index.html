@@ -85,33 +85,36 @@
         <div class="text">
           <h2>About Me</h2>
           <p></p>
-            Hi, I’m Maarten...
+            Hi, I’m Maarten... [t.b.d.]
           </p>
         </div>
       </section>
 
       <!-- cv -->
-      <section id="cv" class="wrapper style2 section">
-        <div class="inner">
-          <h2>Curriculum Vitae</h2>
-          <p></p>
-          <div class="cv-grid">
-            <iframe src="files/Academic_CV_Maarten_Wijdeveld__08_2025.pdf">
-            style="width: 100%; height: 800px; border: none;"></iframe>
-          </div>
-        </div>
-      </section>
+<section id="cv" class="wrapper style2 section">
+  <div class="text">
+    <h2>Curriculum Vitae</h2>
+  </div>
+  <div class="pdf-container">
+    <iframe 
+      src="files/Academic_CV_Maarten_Wijdeveld__08_2025.pdf"
+      style="width: 100%; height: 80vh; border: none; box-shadow: 0 0 15px rgba(0,0,0,0.2); border-radius: 10px;">
+    </iframe>
+  </div>
+</section>
 
-      <!-- MSc thesis -->
-      <section id="thesis" class="wrapper style1 section">
-        <div class="text">
-          <h2>MSc Thesis</h2>
-          <p></p>
-            My Master’s thesis...
-        </div>
-        <p></p>
-        <img src="images/thesis_image.jpg" alt="Thesis Illustration" />
-      </section>
+<!-- MSc thesis -->
+<section id="thesis" class="wrapper style1 section">
+  <div class="text">
+    <h2>MSc Thesis</h2>
+    <p>My Master’s thesis...</p>
+  </div>
+  <div class="image-container">
+    <img src="images/thesis_image.jpg" 
+         alt="Thesis Illustration"
+         style="width: 90%; max-width: 1000px; border-radius: 10px; box-shadow: 0 0 15px rgba(0,0,0,0.2);">
+  </div>
+</section>
 
 
       <!-- poster
@@ -158,40 +161,74 @@
       </section>
 
 <style>
-  #poster {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 1.5rem;
-    text-align: center;
-  }
+/* general section styling        */
+section.wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+  text-align: center;
+  padding: 2rem 1rem; /* general padding for all sections */
+}
 
-  #poster .actions {
-    list-style: none;
-    padding: 0;
-    display: flex;
-    gap: 1rem;
-    justify-content: center;
-  }
+/* PDF and image containers       */
+.pdf-container, .image-container {
+  width: 90%;           /* main width */
+  max-width: 1000px;    /* prevent overly wide on large screens */
+  margin: 0 auto;       /* center horizontally */
+  padding-left: 1.5rem; /* left indent */
+  padding-right: 1.5rem; /* right indent */
+}
 
-  #poster .pdf-container {
-    width: 90%;
-    max-width: 1000px;
-  }
+/* iframe styling for PDFs        */
+iframe {
+  width: 100%;
+  border: none;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+}
 
-  #poster .button {
-    background: #0078ff;
-    color: white;
-    padding: 0.6em 1.2em;
-    border-radius: 8px;
-    text-decoration: none;
-    font-weight: bold;
-    transition: background 0.2s;
-  }
+/* make PDFs fill most of the viewport height */
+#cv iframe,
+#poster iframe {
+  height: 80vh;
+}
 
-  #poster .button:hover {
-    background: #005fcc;
-  }
+/* images (thesis, profile etc.) */
+#thesis img,
+#MW img {
+  width: 100%;           /* full width inside container */
+  max-width: 1000px;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+}
+
+/* text styling inside sections   */
+section.wrapper .text {
+  width: 90%;
+  max-width: 800px;
+  margin: 0 auto;
+  padding-left: 1rem;   /* indent text as well */
+  padding-right: 1rem;
+}
+
+/* Buttons (optional, for poster)
+
+section.wrapper .button {
+  background: #0078ff;
+  color: white;
+  padding: 0.6em 1.2em;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background 0.2s;
+  display: inline-block;
+  margin: 0.5rem;
+}
+
+section.wrapper .button:hover {
+  background: #005fcc;
+}*/
 </style>
 
       
@@ -216,6 +253,7 @@
     <script src="assets/js/main.js"></script>
   </body>
 </html>
+
 
 
 
