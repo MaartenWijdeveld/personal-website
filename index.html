@@ -70,20 +70,15 @@
 
     <!-- wrapper -->
     <div id="wrapper">
-      <!-- MW -->
-      <section id="MW" class="wrapper style1 section">
-        <h1>Maarten Wijdeveld</h1>
-        <img src="images/Jotunheimen_2025.jpeg" 
-             alt="Profile Picture" 
-             style="
-             width: 300px; 
-             height: 300px; 
-             border-radius: 50%;       /* makes it circular */
-             object-fit: cover;        /* keeps proportions inside circle */
-             box-shadow: 0 0 10px rgba(0,0,0,0.2); 
-             transform: translateX(-100px);  /* shift left */
-             " />
-      </section>
+<!-- MW -->
+<section id="MW" class="wrapper style1 section">
+  <h1>Maarten Wijdeveld</h1>
+  <div class="profile-image-container">
+    <img src="images/Jotunheimen_2025.jpeg" 
+         alt="Profile Picture" 
+         class="profile-image" />
+  </div>
+</section>
 
       
       <!-- about me 
@@ -253,6 +248,21 @@ section.wrapper .button {
 section.wrapper .button:hover {
   background: #005fcc;
 }*/
+.profile-image-container {
+  position: relative;   /* allows child transform */
+}
+
+.profile-image {
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+  transform: translateX(-100px);  /* will now work */
+  transition: transform 0.3s ease; /* optional smooth movement */
+}
+
+  
 </style>
 
       
@@ -277,6 +287,7 @@ section.wrapper .button:hover {
     <script src="assets/js/main.js"></script>
   </body>
 </html>
+
 
 
 
