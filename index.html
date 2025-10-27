@@ -74,10 +74,8 @@
         <img src="images/profile.jpg" alt="Profile Picture" />
         <div class="text">
           <h2>About Me</h2>
-          <p>
-            Hi, I’m <strong>Maarten Wijdeveld</strong>. I am passionate about [your field or area of expertise],
-            with research interests in [specific interests or topics].
-            I enjoy combining technical precision with creative problem solving.
+          <p></p>
+            Hi, I’m Maarten...
           </p>
         </div>
       </section>
@@ -86,10 +84,9 @@
       <section id="cv" class="wrapper style2 fade-up">
         <div class="inner">
           <h2>Curriculum Vitae</h2>
-          <p>You can view my CV documents below.</p>
           <div class="cv-grid">
-            <iframe src="files/MaartenWijdeveld_CV_Academic.pdf"></iframe>
-            <iframe src="files/MaartenWijdeveld_CV_Professional.pdf"></iframe>
+            <iframe src="files/CV_Academic.pdf"></iframe>
+            <!-- <iframe src="files/CV_Professional.pdf"></iframe> -->
           </div>
         </div>
       </section>
@@ -99,9 +96,7 @@
         <div class="text">
           <h2>MSc Thesis</h2>
           <p>
-            My Master’s thesis, titled <strong>“[Thesis Title Here]”</strong>,
-            explores [short description of your topic — for example: the application of machine learning in biological systems].
-            The research focuses on [one key insight or contribution].
+            My Master’s thesis...
           </p>
         </div>
         <img src="images/thesis_image.jpg" alt="Thesis Illustration" />
@@ -110,20 +105,72 @@
       <!-- Poster -->
       <section id="poster" class="wrapper style2 section">
         <div class="text">
-          <h2>Poster Contribution</h2>
+          <h2>Conference Poster</h2>
           <p>
-            This poster, presented at the <strong>NAC Conference</strong>,
-            summarizes key findings from my MSc research on [topic].
+            Presented at the <strong>2025 Netherlands Astronomy Conference</strong>
           </p>
           <ul class="actions">
-            <li><a href="files/NAC_Poster_MaartenWijdeveld.pdf" class="button" target="_blank">View Poster PDF</a></li>
+            <li>
+              <a href="files/NAC_Poster_final_MaartenWijdeveld.pdf" class="button" target="_blank">Open in new tab</a>
+            </li>
+            <li>
+              <a href="files/NAC_Poster_final_MaartenWijdeveld.pdf" 
+           class="button" download>Download</a>
+            </li>
           </ul>
         </div>
-        <img src="images/poster_image.jpg" alt="Poster Preview" />
+        
+        <!-- Embedded PDF viewer -->
+        <div class="pdf-container">
+          <iframe 
+            src="files/NAC_Poster_final_MaartenWijdeveld.pdf"
+            title="Conference Poster PDF"
+            width="100%"
+            height="800px"
+            style="border: none; box-shadow: 0 0 15px rgba(0,0,0,0.2); border-radius: 10px;">
+          </iframe>
+        </div>
       </section>
 
-    </div>
+<style>
+  #poster {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    text-align: center;
+  }
 
+  #poster .actions {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+  }
+
+  #poster .pdf-container {
+    width: 90%;
+    max-width: 1000px;
+  }
+
+  #poster .button {
+    background: #0078ff;
+    color: white;
+    padding: 0.6em 1.2em;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background 0.2s;
+  }
+
+  #poster .button:hover {
+    background: #005fcc;
+  }
+</style>
+
+      
+    </div>
     <!-- Footer -->
     <footer id="footer" class="wrapper style1-alt">
       <div class="inner">
@@ -144,4 +191,5 @@
     <script src="assets/js/main.js"></script>
   </body>
 </html>
+
 
